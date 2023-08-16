@@ -1,12 +1,8 @@
 package tests;
 
-
 import com.demo.pages.RegistrationPageObjects;
 import org.junit.jupiter.api.Test;
-
-
 public class DemoRegistrationTests extends TestBase {
-
     RegistrationPageObjects registrationPageObjects = new RegistrationPageObjects();
     @Test
     void fillFormTest() {
@@ -26,7 +22,6 @@ public class DemoRegistrationTests extends TestBase {
                 .choiceCity("Delhi")
                 .clickSubmit();
 
-
         registrationPageObjects.verifyRegistrationResultModalAppears()
                 .verifyResult("Britney Spears")
                 .verifyResult("britneyspears@gmail.com")
@@ -39,10 +34,7 @@ public class DemoRegistrationTests extends TestBase {
                 .verifyResult("Las Vegas")
                 .verifyResult("NCR Delhi")
                 .closeModalVerify();
-
-
     }
-
 }
 
 
