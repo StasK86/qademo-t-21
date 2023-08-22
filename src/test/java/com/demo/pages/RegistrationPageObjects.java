@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class RegistrationPageObjects {
 
-    CalendarComponent calendar = new CalendarComponent();
+    CalendarComponent calendarComponent = new CalendarComponent();
     ResultsModal resultsModal = new ResultsModal();
     SelenideElement
             firstNameInput = $("#firstName"),
@@ -30,79 +30,82 @@ public class RegistrationPageObjects {
             addFormSubmit = $("#submit"),
             closeModal = $("#closeLargeModal");
 
-        public RegistrationPageObjects openPage() {
-        open ("/automation-practice-form");
+    public RegistrationPageObjects openPage() {
+        open("/automation-practice-form");
+        closeBanner();
+        return this;
+    }
+    public RegistrationPageObjects closeBanner() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
         return this;
     }
-        public RegistrationPageObjects setFirstName(String value) {
+    public RegistrationPageObjects setFirstName(String value) {
         firstNameInput.setValue(value);
         return this;
     }
-        public RegistrationPageObjects setLastName(String value) {
+    public RegistrationPageObjects setLastName(String value) {
         lastNameInput.setValue(value);
         return this;
     }
-        public RegistrationPageObjects setUserEmail(String value) {
+    public RegistrationPageObjects setUserEmail(String value) {
         userEmailInput.setValue(value);
         return this;
     }
-        public RegistrationPageObjects setGender(String value) {
+    public RegistrationPageObjects genterWrapper(String value) {
         genterWrapper.$(byText(value)).click();
         return this;
     }
-        public RegistrationPageObjects setUserNumber(String value) {
+    public RegistrationPageObjects setUserNumber(String value) {
         userNumberInput.setValue(value);
         return this;
     }
-        public RegistrationPageObjects setBirthDate(String day, String month, String year) {
+    public RegistrationPageObjects setBirthDate(String day, String month, String year) {
         birthDateInput.click();
-        calendar.setDate(day, month, year);
+        new CalendarComponent().setDate(day, month, year);
         return this;
     }
-        public RegistrationPageObjects setSubjectsInput(String value) {
-        subjectsInput.setValue(value).pressEnter();
-        return this;
-    }
-        public RegistrationPageObjects setUserHobbies(String value) {
+    public RegistrationPageObjects setUserHobbies(String value) {
         hobbiesWrapper.$(byText(value)).click();
         return this;
     }
-        public RegistrationPageObjects setCurrentAddress(String value) {
-        currentAddressInput.setValue(value);
-        return this;
-    }
-        public RegistrationPageObjects setUploadPicture(String value) {
+    public RegistrationPageObjects setUploadPicture(String value) {
         uploadPicture.uploadFromClasspath(value);
         return this;
     }
-        public RegistrationPageObjects choiceState(String value) {
+    public RegistrationPageObjects setCurrentAddress(String value) {
+        currentAddressInput.setValue(value);
+        return this;
+    }
+    public RegistrationPageObjects setSubjectsInput(String value) {
+        subjectsInput.setValue(value).pressEnter();
+        return this;
+    }
+    public RegistrationPageObjects choiceState(String value) {
         state.click();
         stateInput.$(byText(value)).click();
         return this;
     }
-        public RegistrationPageObjects choiceCity(String value) {
+    public RegistrationPageObjects choiceCity(String value) {
         city.click();
         cityInput.$(byText(value)).click();
         return this;
     }
-        public RegistrationPageObjects clickSubmit() {
+    public RegistrationPageObjects clickSubmit() {
         addFormSubmit.click();
         return this;
     }
-        public RegistrationPageObjects verifyRegistrationResultModalAppears() {
+    public RegistrationPageObjects verifyRegistrationResultModalAppears() {
         resultsModal.verifyModal();
         return this;
     }
-        public RegistrationPageObjects verifyResult(String key) {
+
+    public RegistrationPageObjects verifyResult(String key) {
         resultsModal.verifyResult(key);
         return this;
     }
-        public RegistrationPageObjects closeModalVerify() {
+    public RegistrationPageObjects closeModalVerify() {
         closeModal.click();
         return this;
     }
 }
-
-

@@ -11,7 +11,7 @@ public class DemoRegistrationTests extends TestBase {
                 .setFirstName("Britney")
                 .setLastName("Spears")
                 .setUserEmail("britneyspears@gmail.com")
-                .setGender("Female")
+                .genterWrapper("Female")
                 .setUserNumber("7234567890")
                 .setBirthDate("02","December","1981" )
                 .setSubjectsInput("Arts")

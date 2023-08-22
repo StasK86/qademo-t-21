@@ -9,8 +9,9 @@ public class TestBase {
         @BeforeAll
         static void beforeAll() {
             Configuration.baseUrl = "https://demoqa.com";
-            Configuration.browserSize = "1670x1050";
+            Configuration.browserSize = "1500x1000";
             Configuration.pageLoadStrategy = "eager";
+            //Configuration.timeout = 10_000;
         }
     }
 
