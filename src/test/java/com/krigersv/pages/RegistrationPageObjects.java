@@ -1,8 +1,8 @@
-package com.demo.pages;
+package com.krigersv.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.demo.pages.components.CalendarComponent;
-import com.demo.pages.components.ResultsModal;
+import com.krigersv.pages.components.CalendarComponent;
+import com.krigersv.pages.components.ResultsModal;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;

@@ -1,6 +1,7 @@
 package tests;
 
-import com.demo.pages.RegistrationPageObjects;
+import com.krigersv.pages.RegistrationPageObjects;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import utils.TestGenerator;
 
@@ -10,6 +11,7 @@ public class DemoRegistrationRandomTest extends TestBase {
     TestGenerator utils = new TestGenerator();
 
     @Test
+    @Tag("demo")
     void fillFormTest() {
 
         RegistrationPageObjects.openPage()
