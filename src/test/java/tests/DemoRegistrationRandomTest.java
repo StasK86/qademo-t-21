@@ -11,7 +11,7 @@ public class DemoRegistrationRandomTest extends TestBase {
     TestGenerator utils = new TestGenerator();
 
     @Test
-    @Tag("demo")
+    @Tag("remote")
     void fillFormTest() {
 
         RegistrationPageObjects.openPage()
