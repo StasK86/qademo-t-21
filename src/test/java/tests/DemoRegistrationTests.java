@@ -1,10 +1,12 @@
 package tests;
 
 import com.krigersv.pages.RegistrationPageObjects;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 public class DemoRegistrationTests extends TestBase {
     RegistrationPageObjects registrationPageObjects = new RegistrationPageObjects();
     @Test
+    @Tag("demo")
     void fillFormTest() {
 
         registrationPageObjects.openPage()
