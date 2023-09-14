@@ -1,0 +1,7 @@
+TestsStasBot
+5960877590:AAFv_mnVeUiEDiu8hTSRLcyZBvS4gfWBlV4
+-1001989432251
+452212847
+https://api.telegram.org/bot5960877590:AAFv_mnVeUiEDiu8hTSRLcyZBvS4gfWBlV4/getUpdates
+
+java "-DconfigFile=notifications/config.json" -jar ../allure-notifications-4.3.0.jar
