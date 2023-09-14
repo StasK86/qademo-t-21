@@ -1,12 +1,12 @@
 {
   "base": {
     "logo": "logo.png",
-    "project": "Test",
+    "project": "some project",
     "environment": "some env",
-    "comment": "@krigersv.com",
+    "comment": "some comment",
     "reportLink": "",
     "language": "en",
-    "allureFolder": "build/reports/allure-report/allureReport",
+    "allureFolder": "build/reports/allure-report/",
     "enableChart": true
   },
   "telegram": {
