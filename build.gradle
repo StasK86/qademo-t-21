@@ -52,13 +52,17 @@ tasks.withType(Test) {
 }
 
 task remote_test(type: Test) {
-    useJUnitPlatform{
+    useJUnitPlatform {
         includeTags("remote")
     }
 }
-
 task demo_test(type: Test) {
-    useJUnitPlatform{
+    useJUnitPlatform {
         includeTags("demo")
+    }
+}
+task smoke_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("smoke")
     }
 }

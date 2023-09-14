@@ -1,11 +1,13 @@
 package tests;
 
 import com.krigersv.TextBoxPage;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class TextBoxTests extends TestBase {
     TextBoxPage textBoxPage = new TextBoxPage();
     @Test
+    @Tag("smoke")
     void fillFormTest() {
         textBoxPage.openPage().removeBanner()
                 .seUserName("Britney Spears")
