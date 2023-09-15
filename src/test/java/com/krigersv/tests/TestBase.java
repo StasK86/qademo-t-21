@@ -1,4 +1,4 @@
-package tests;
+package com.krigersv.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -31,12 +31,12 @@ public class TestBase {
     }
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
+        Configuration.browser = System.getProperty("BROWSER", "chrome");
+        Configuration.browserSize = System.getProperty("BROWSER_SIZE", "1920x1080");
+        Configuration.browserVersion = System.getProperty("VERSION", "100.0");
+        Configuration.baseUrl = System.getProperty("base_URL", "https://demoqa.com");
         Configuration.pageLoadStrategy = "eager";
-        Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.remote = System.getProperty("REMOTE_URL");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

@@ -1,6 +1,6 @@
-package tests;
+package com.krigersv.tests;
 
-import com.krigersv.pages.RegistrationPageObjects;
+import com.krigersv.pages.components.RegistrationPageObjects;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 public class DemoRegistrationTests extends TestBase {

@@ -1,6 +1,6 @@
-package tests;
+package com.krigersv.tests;
 
-import com.krigersv.TextBoxPage;
+import com.krigersv.pages.components.TextBoxPage;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 

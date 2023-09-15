@@ -1,4 +1,4 @@
-package utils;
+package com.krigersv.utils;
 
 
 public class TestGenerator {
