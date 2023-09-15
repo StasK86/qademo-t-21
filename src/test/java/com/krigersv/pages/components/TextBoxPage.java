@@ -1,4 +1,4 @@
-package com.krigersv;
+package com.krigersv.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
 

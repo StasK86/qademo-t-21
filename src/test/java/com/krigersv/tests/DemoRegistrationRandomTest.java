@@ -1,9 +1,9 @@
-package tests;
+package com.krigersv.tests;
 
-import com.krigersv.pages.RegistrationPageObjects;
+import com.krigersv.pages.components.RegistrationPageObjects;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import utils.TestGenerator;
+import com.krigersv.utils.TestGenerator;
 
 public class DemoRegistrationRandomTest extends TestBase {
 
